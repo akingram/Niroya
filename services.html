@@ -2,7 +2,7 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <title>Services | Niroya/title>
+    <title>Services | Niroya</title>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
     <meta name="bingbot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -87,24 +87,6 @@
             padding: 0 1rem;
         }
         
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -0.75rem;
-        }
-        
-        .col-12, .col-6, .col-4, .col-3, .elementor-col-25, .elementor-col-33, .elementor-col-50 {
-            padding: 0 0.75rem;
-        }
-        
-        .col-12 { width: 100%; }
-        .col-6 { width: 50%; }
-        .col-4 { width: 33.333333%; }
-        .col-3 { width: 25%; }
-        .elementor-col-25 { width: 25%; }
-        .elementor-col-33 { width: 33.333333%; }
-        .elementor-col-50 { width: 50%; }
-        
         /* Header Styles */
         #ct-masthead {
             position: fixed;
@@ -128,9 +110,10 @@
             justify-content: space-between;
         }
         
-        .ct-header-branding img {
-            max-height: 45px;
-            width: auto;
+        .ct-header-branding {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-color);
         }
         
         .ct-main-menu {
@@ -306,6 +289,11 @@
             gap: 2rem;
         }
         
+        .elementor-col-50 {
+            flex: 1;
+            min-width: 300px;
+        }
+        
         .ct-heading {
             margin-bottom: 2rem;
         }
@@ -460,9 +448,10 @@
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         }
         
-        .ct-image-single img {
-            max-height: 60px;
-            margin-bottom: 1.5rem;
+        .elementor-col-25 {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
         }
         
         .ct-text-editor p {
@@ -568,69 +557,8 @@
             }
         }
         
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
         /* Responsive Design */
-        @media (max-width: 1200px) {
-            .container {
-                max-width: 992px;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .container {
-                max-width: 768px;
-            }
-            
-            .elementor-col-25,
-            .elementor-col-33,
-            .elementor-col-50 {
-                width: 50%;
-            }
-            
-            .services-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
-            }
-            
-            .page-title {
-                font-size: 2.5rem;
-            }
-        }
-        
         @media (max-width: 768px) {
-            .container {
-                max-width: 576px;
-                padding: 0 1rem;
-            }
-            
-            .elementor-col-25,
-            .elementor-col-33,
-            .elementor-col-50 {
-                width: 100%;
-                margin-bottom: 2rem;
-            }
-            
             .ct-main-menu {
                 display: none;
             }
@@ -656,25 +584,21 @@
             .site-content {
                 padding: 80px 0;
             }
+            
+            .elementor-container {
+                flex-direction: column;
+            }
+            
+            .elementor-col-25 {
+                min-width: 100%;
+            }
         }
         
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 0.75rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .page-title {
-                font-size: 1.75rem;
-            }
-            
-            .ct-heading .item--title {
-                font-size: 1.75rem;
-            }
+        /* Focus states for better accessibility */
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
         }
         
         /* Performance optimizations */
@@ -697,13 +621,6 @@
                 scroll-behavior: auto !important;
             }
         }
-        
-        /* Focus states for better accessibility */
-        a:focus,
-        button:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
     </style>
 </head>
 
@@ -718,7 +635,7 @@
                             <div class="ct-header-branding">
                                 <div class="ct-header-branding-inner">
                                     <a class="logo-dark" href="index.html" title="NIROYA" rel="home">
-                                        <img src="/images/Niroya.png" alt="NIROYA" loading="lazy"/>
+                                        <img src="images/Niroya.png" alt="NIROYA Logo" style="height: 48px; vertical-align: middle;">
                                     </a>
                                 </div>
                             </div>
@@ -871,7 +788,7 @@
                                         <div class="elementor-widget-wrap elementor-element-populated footer-section">
                                             <div class="ct-image-single img-type-img ct-no-effect">
                                                 <a href="index.html">
-                                                    <img src="/images/Niroya.png" alt="NIROYA Logo" loading="lazy" />
+                                                    <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-color);">NIROYA</div>
                                                 </a>
                                             </div>
                                             <div class="ct-text-editor">
@@ -1049,6 +966,8 @@
     <script>
         // Enhanced JavaScript functionality
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('NIROYA Services Page Loading...');
+            
             // Smooth scrolling for anchor links
             const links = document.querySelectorAll('a[href^="#"]');
             links.forEach(link => {
@@ -1106,7 +1025,7 @@
                 observer.observe(card);
             });
 
-            console.log('NIROYA - Services Page Loaded Successfully');
+            console.log('NIROYA Services Page Loaded Successfully');
         });
 
         // Lazy loading for background images
@@ -1125,6 +1044,12 @@
                 imageObserver.observe(img);
             });
         }
+        
+        // Error handling for external resources
+        window.addEventListener('error', function(e) {
+            console.warn('Resource failed to load:', e.target.src || e.target.href);
+            // Page will continue to function even if external resources fail
+        });
     </script>
 </body>
 </html>
