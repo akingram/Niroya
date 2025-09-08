@@ -1,178 +1,753 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Policy & Compliance | NIROYA</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Sustainability and Ethics Policies | SUNBETH GLOBAL CONCEPTS</title>
+    <meta name="description" content="NIROYA Concepts is committed to sustainable and ethical practices in cocoa and cashew trading. Learn about our ESG, DEI, Human Rights, and IMS policies.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #e08028;
+            --secondary-color: #dc5428;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --dark-bg: #222;
+            --white: #fff;
+            --gray: #ecf0f1;
+            --border-color: #ddd;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        #ct-masthead {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ct-header-main {
+            padding: 15px 0;
+        }
+        
+        .ct-header-branding img {
+            max-height: 40px;
+        }
+        
+        .ct-main-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .ct-main-menu li {
+            position: relative;
+            margin: 0 15px;
+        }
+        
+        .ct-main-menu li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .ct-main-menu li a:hover, 
+        .ct-main-menu li a.active {
+            color: var(--primary-color);
+        }
+        
+        .ct-main-menu li a.active::after,
+        .ct-main-menu li a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .ct-main-menu .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            list-style: none;
+        }
+        
+        .ct-main-menu li:hover .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .ct-main-menu .sub-menu li {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        .ct-main-menu .sub-menu li a {
+            display: block;
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Page Title Section */
+        #pagetitle {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://sunbeth.net/storage/2023/01/Sunbeth-global-concepts-privacy-2-scaled.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+        
+        .page-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .ct-breadcrumb {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        .ct-breadcrumb li {
+            margin: 0 5px;
+            color: var(--white);
+        }
+        
+        .ct-breadcrumb li a {
+            color: var(--white);
+        }
+        
+        /* Content Section */
+        .site-content {
+            padding: 80px 0;
+        }
+        
+        .ct-title1 h3 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .ct-title1 h3 i {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .policy-intro {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        /* Tabs Section */
+        .ct-tabs {
+            margin-top: 40px;
+        }
+        
+        .ct-tabs-title {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+        
+        .ct-tab-title {
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .ct-tab-title.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .ct-tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+        
+        .ct-tab-content:first-child {
+            display: block;
+        }
+        
+        .policy-section {
+            margin-bottom: 40px;
+        }
+        
+        .policy-section h4 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .policy-section h5 {
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 20px;
+        }
+        
+        .policy-section h6 {
+            color: var(--text-color);
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+        
+        .policy-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .policy-section ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .policy-section ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .policy-section ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .policy-section ol li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        /* Footer Styles */
+        .site-footer-custom {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-custom-inner {
+            padding: 40px 0;
+        }
+        
+        .ct-image-single img {
+            max-height: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .ct-text-editor p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .ct-icon1 a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: var(--white);
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .ct-icon1 a:hover {
+            background: var(--primary-color);
+        }
+        
+        .elementor-icon-list-items {
+            list-style: none;
+        }
+        
+        .elementor-icon-list-item {
+            margin-bottom: 10px;
+        }
+        
+        .elementor-icon-list-item a {
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .elementor-icon-list-item a:hover {
+            color: var(--primary-color);
+        }
+        
+        .elementor-icon-list-icon {
+            margin-right: 10px;
+        }
+        
+        .ct-contact-info li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .ct-contact-icon {
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .ct-main-menu {
+                flex-direction: column;
+                display: none;
+            }
+            
+            .ct-main-menu.show {
+                display: flex;
+            }
+            
+            .ct-tabs-title {
+                flex-direction: column;
+            }
+            
+            .ct-tab-title {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .page-title {
+                font-size: 32px;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .ct-tab-content {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-top">
-            <div class="container header-top-content">
-                <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
-                    <span><i class="fas fa-envelope"></i> info@niroya.com</span>
-                </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Header -->
+    <header id="ct-masthead">
+        <div class="ct-header-main">
+            <div class="container">
+                <div class="row">
+                    <div class="ct-header-branding">
+                        <div class="ct-header-branding-inner">
+                            <a href="index.html" title="NIROYA" rel="home">
+                                <img src="/images/Niroya.png" alt="NIROYA" style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ct-header-navigation">
+                        <nav class="ct-main-navigation">
+                            <div class="ct-main-navigation-inner">
+                                <div class="ct-main-navigation-filter">
+                                    <ul class="ct-main-menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#">Company</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.html">About Us</a></li>
+                                                <!-- <li><a href="https://sunbeth.net/our-cultre/">Our Culture</a></li>
+                                                <li><a href="https://sunbeth.net/our-team/">Team</a></li> -->
+                                                <li><a href="contact.html">Contact Us</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children current-menu-ancestor">
+                                            <a href="policy.html">Policy & Compliance</a>
+                                            <!-- <ul class="sub-menu">
+                                                <li><a href="https://sunbeth.net/sustainability-and-ethics-policies/" class="active">ESG Policy</a></li>
+                                                <li><a href="https://sunbeth.net/sustainability-and-ethics-policies/">DEI Policy</a></li>
+                                                <li><a href="https://sunbeth.net/sustainability-and-ethics-policies/">Human Rights Policy</a></li>
+                                                <li><a href="https://sunbeth.net/sustainability-and-ethics-policies/">IMS Policy</a></li>
+                                                <li><a href="https://sunbeth.net/whistleblower/">Whistleblower Policy</a></li>
+                                                <li><a href="https://sunbeth.net/csr/">CSR</a></li>
+                                            </ul> -->
+                                        </li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <!-- <li><a href="https://sunbeth.net/careers/">Careers</a></li>
+                                        <li><a href="https://sunbeth.net/vital-reads/">News & Events</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container main-header">
-            <a href="index.html" class="logo">
-                 <img src="images/Niroya.png" alt="NIROYA Logo" class="logo-img">
-            </a>
-            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-            <nav>
-                <ul id="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="policy.html" class="active">Policy & Compliance</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- Page Title -->
+    <div id="pagetitle" class="page-title bg-image text-center">
         <div class="container">
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Policy & Compliance</h1>
-                    <p>Our commitment to ethical business practices and regulatory compliance</p>
+            <div class="page-title-inner">
+                <div class="page-title-holder">
+                    <h1 class="page-title">Sustainability and Ethics Policies</h1>
                 </div>
-            </section>
-
-            <section class="services">
-                <div class="policy-content">
-                    <div class="policy-section">
-                        <h2>Compliance Framework</h2>
-                        <p>At NIROYA, we maintain a robust compliance framework that ensures we operate within all applicable laws, regulations, and industry standards across all jurisdictions where we conduct business.</p>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3><i class="fas fa-gavel"></i> Ethical Business Practices</h3>
-                        <p>We are committed to conducting business with the highest ethical standards. Our Code of Conduct outlines the principles that guide our operations and relationships:</p>
-                        <ul>
-                            <li>Zero tolerance for bribery and corruption</li>
-                            <li>Fair competition and antitrust compliance</li>
-                            <li>Conflicts of interest avoidance</li>
-                            <li>Accurate record-keeping and reporting</li>
-                            <li>Protection of confidential information</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3><i class="fas fa-money-bill-wave"></i> Anti-Money Laundering (AML)</h3>
-                        <p>We have implemented comprehensive AML policies and procedures to detect and prevent money laundering activities:</p>
-                        <ul>
-                            <li>Customer due diligence and Know Your Customer (KYC) procedures</li>
-                            <li>Transaction monitoring and reporting</li>
-                            <li>Employee training programs</li>
-                            <li>Regular independent audits</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3><i class="fas fa-ban"></i> Sanctions Compliance</h3>
-                        <p>We strictly adhere to all international sanctions regimes and have implemented systems to ensure compliance:</p>
-                        <ul>
-                            <li>Regular screening of clients and partners against sanctions lists</li>
-                            <li>Geographic restrictions on certain transactions</li>
-                            <li>Ongoing monitoring of regulatory changes</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3><i class="fas fa-leaf"></i> Environmental Policy</h3>
-                        <p>We are committed to minimizing our environmental impact and promoting sustainable practices:</p>
-                        <ul>
-                            <li>Compliance with environmental regulations</li>
-                            <li>Sustainable sourcing initiatives</li>
-                            <li>Carbon footprint reduction programs</li>
-                            <li>Support for environmental conservation projects</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3><i class="fas fa-hard-hat"></i> Health and Safety</h3>
-                        <p>The health and safety of our employees, partners, and communities is our priority:</p>
-                        <ul>
-                            <li>Comprehensive safety protocols for all operations</li>
-                            <li>Regular safety training and drills</li>
-                            <li>Emergency response planning</li>
-                            <li>Continuous improvement of safety standards</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3><i class="fas fa-exclamation-circle"></i> Reporting Concerns</h3>
-                        <p>We encourage employees and stakeholders to report any concerns about potential violations of our policies or applicable laws through our confidential reporting channels:</p>
-                        <ul>
-                            <li>Email: compliance@niroya.com</li>
-                            <li>Hotline: +1 (555) 999-REPORT</li>
-                            <li>Online reporting portal</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+                <ul class="ct-breadcrumb">
+                    <li><a class="breadcrumb-entry" href="index3.html">Home</a></li>
+                    <li><span class="breadcrumb-entry">Sustainability and Ethics Policies</span></li>
+                </ul>
+            </div>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Main Content -->
+    <div id="content" class="site-content">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NIROYA</h3>
-                    <p>Leading international commodity trading company providing innovative solutions and market expertise across global supply chains.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="policy.html">Policy & Compliance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Trade Center, Global City, GC 10001</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@niroya.com</li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Other Pages</h3>
-                    <ul>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">News & Insights</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+            <div class="row">
+                <div class="col-12">
+                    <main class="site-main">
+                        <article class="page type-page">
+                            <div class="entry-content">
+                                <section class="elementor-section">
+                                    <div class="elementor-container">
+                                        <div class="elementor-column elementor-col-100">
+                                            <div class="elementor-widget-wrap">
+                                                <div class="ct-title1 style2">
+                                                    <h3>Sustainability and Ethics Policies<i></i></h3>
+                                                </div>
+                                                <div class="policy-intro">
+                                                    <p>We are committed to building a better future through sustainable and ethical practices. By minimizing our environmental footprint, promoting responsible sourcing, and fostering a culture of inclusion and fairness, we aim to create lasting positive impacts. Our dedication to Diversity, Equity, and Inclusion (DEI), Human Rights, and strong Environmental, Social, and Governance (ESG) principles ensures that we uphold the highest standards while empowering individuals and supporting communities.</p>
+                                                </div>
+
+                                                <!-- Tabs Section -->
+                                                <div class="ct-tabs ct-tabs--layout1 type-horizontal style4">
+                                                    <div class="ct-tabs-title">
+                                                        <span class="ct-tab-title active" data-target="#esg-policy">Our ESG Policy</span>
+                                                        <span class="ct-tab-title" data-target="#dei-policy">DEI Policy</span>
+                                                        <span class="ct-tab-title" data-target="#human-rights-policy">Human Rights Policy</span>
+                                                        <span class="ct-tab-title" data-target="#ims-policy">IMS Policy</span>
+                                                    </div>
+                                                    <div class="ct-tabs-content">
+                                                        <!-- ESG Policy -->
+                                                        <div class="ct-tab-content" id="esg-policy" style="display:block;">
+                                                            <div class="policy-section">
+                                                                <h4>ESG POLICY</h4>
+                                                                <p><strong>Introduction</strong></p>
+                                                                <p>Sunbeth Global Concepts Limited (Sunbeth) was established in 2017 as a trading company for commodities such as raw cocoa beans and cashew nuts. Our vision is to be a leading food and multi-commodity service and solution provider in the global food and agriculture markets, by creating measurable and impactful sustainable, economic, social, and environmental value throughout the full value chain.</p>
+                                                                <p>Sunbeth is dedicated to sustainable and ethical business practices. We recognize that our operations have a significant impact on the environment and society at large. We incorporate environmental, social, and governance (ESG) considerations into all aspects of our operations in Nigeria, adhering to applicable regulations.</p>
+                                                            </div>
+                                                            
+                                                            <div class="policy-section">
+                                                                <h5>1. Environmental Stewardship</h5>
+                                                                <p><strong>1.1. Overview:</strong></p>
+                                                                <p>We understand that we have a responsibility to ensure that our operations within the cocoa sourcing industry have a minimal impact on the environment. As good stewards, we are committed to sustainable practices that protect and preserve natural resources for future generations.</p>
+                                                                
+                                                                <p><strong>1.2. Sustainable Sourcing:</strong></p>
+                                                                <p>We are dedicated to driving sustainable sourcing practices across our cocoa supply chain, as we believe that responsible sourcing is essential for the preservation of our environment and the prosperity of our communities.</p>
+                                                                
+                                                                <p><strong>1.3. Climate Action:</strong></p>
+                                                                <p>We aim to reduce our carbon footprint by implementing energy-efficient practices and investing in renewable energy. We will track and report our greenhouse gas emissions and set targets for continuous improvement.</p>
+                                                            </div>
+                                                            
+                                                            <div class="policy-section">
+                                                                <h5>2. Social Responsibility</h5>
+                                                                <p><strong>2.1. Overview:</strong></p>
+                                                                <p>At Sunbeth, a deep commitment to social responsibility is at the core of our identity. We believe that people are the heart of our business, and we take pride in fostering an inclusive and supportive work culture.</p>
+                                                                
+                                                                <p><strong>2.2. Diversity, Equity and Inclusion (DEI):</strong></p>
+                                                                <p>Our policy prohibits discrimination based on a person's race, ethnicity, religion, gender, sexual orientation, age, handicap, and gender. This policy guarantees equal opportunities for all workers in terms of hiring, training, advancement, and pay.</p>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- DEI Policy -->
+                                                        <div class="ct-tab-content" id="dei-policy">
+                                                            <div class="policy-section">
+                                                                <h4>Diversity, Equity, and Inclusion (DEI) Policy</h4>
+                                                                <h5>1. Purpose</h5>
+                                                                <p>Sunbeth Global is committed to fostering a diverse, equitable, and inclusive workplace that reflects the global community we serve. We believe that a diverse workforce enhances creativity, innovation, and performance.</p>
+                                                                
+                                                                <h5>2. Scope</h5>
+                                                                <p>This policy applies to all employees, contractors, and business partners of Sunbeth Global and its subsidiaries, across all locations and levels within the organization.</p>
+                                                                
+                                                                <h5>3. Policy Statement</h5>
+                                                                <p>Sunbeth Global is dedicated to creating a workplace where diversity is celebrated, equity is upheld, and inclusion is practiced. We are committed to:</p>
+                                                                <ul>
+                                                                    <li><strong>Diversity:</strong> Actively seeking and valuing diverse perspectives, experiences, and backgrounds</li>
+                                                                    <li><strong>Equity:</strong> Ensuring fair treatment, access, and opportunities for all employees</li>
+                                                                    <li><strong>Inclusion:</strong> Fostering a culture of belonging where every individual feels valued</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Human Rights Policy -->
+                                                        <div class="ct-tab-content" id="human-rights-policy">
+                                                            <div class="policy-section">
+                                                                <h4>Human Rights Policy</h4>
+                                                                <h5>Introduction</h5>
+                                                                <p>At Sunbeth Global Concepts Limited, we are committed to upholding and promoting human rights in all aspects of our operations. We recognize our responsibility to respect human rights as articulated in the Universal Declaration of Human Rights (UDHR), the International Labour Organization (ILO) Declaration on Fundamental Principles and Rights at Work, and the United Nations Guiding Principles on Business and Human Rights.</p>
+                                                                
+                                                                <h5>Purpose and Scope</h5>
+                                                                <p>This policy outlines our commitment to human rights within our operations and supply chain. We expect our suppliers and business partners to adhere to these principles and strongly encourage them to implement similar policies within their own operations.</p>
+                                                                
+                                                                <h5>Relevant Human Right Issues</h5>
+                                                                <p>While our approach to human rights is guided by relevant local and international regulations, we have a focus on specific issues that are most relevant to our industry:</p>
+                                                                <ol>
+                                                                    <li>Health and Safety</li>
+                                                                    <li>Workers' Rights</li>
+                                                                    <li>Forced Labour</li>
+                                                                    <li>Child Labour</li>
+                                                                    <li>Women Empowerment</li>
+                                                                </ol>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- IMS Policy -->
+                                                        <div class="ct-tab-content" id="ims-policy">
+                                                            <div class="policy-section">
+                                                                <h4>INTEGRATED MANAGEMENT SYSTEM POLICY</h4>
+                                                                <p>SUNBETH GLOBAL CONCEPTS LIMITED is committed to the exportation of high-quality cocoa beans and cashews by providing quality products and services, ensuring customer satisfaction, and minimizing our environmental impact while safeguarding the health and safety of our employees, customers, contractors and the community.</p>
+                                                                
+                                                                <p><strong>Our commitment includes:</strong></p>
+                                                                <ul>
+                                                                    <li>Delivering high-quality cocoa beans and cashew products and services that meet or exceed customer expectations.</li>
+                                                                    <li>Minimizing our environmental impact through sustainable practices and resource conservation.</li>
+                                                                    <li>Compliance with all relevant interested parties' requirements.</li>
+                                                                    <li>Continual improvement of our operations through continuous customer satisfaction.</li>
+                                                                    <li>Planning, responding to, and recovering from any emergency, crisis, and business disruption.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </article>
+                    </main>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 NIROYA. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer-custom">
+        <div class="footer-custom-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-content">
+                            <div class="footer-column">
+                                <div class="ct-image-single">
+                                    <a href="index3.html">
+                                        <img src="https://sunbeth.net/storage/2019/10/SGC-Logo-Dark-scaled.png" alt="SGC Logo - Dark" style="height: 50px;">
+                                    </a>
+                                </div>
+                                <div class="ct-text-editor">
+                                    <p>Sunbeth Global Concepts (SGC) is a reputable trading firm that specializes in the export of premium quality raw cocoa beans and cashew from Nigeria.</p>
+                                </div>
+                                <div class="ct-icon1 style2">
+                                    <a href="https://linkedin.com/company/sunbethgc"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://facebook.com/sunbethgc"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com/sunbethgc"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://instagram.com/sunbethgc"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/@Sunbeth"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                            <!-- <div class="footer-column">
+                                <h3>Navigation</h3>
+                                <ul class="elementor-icon-list-items">
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/about-us/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">About</span>
+                                        </a>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/our-cultre/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">Our Culture</span>
+                                        </a>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/our-team/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">Our Team</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-column">
+                                <h3>Quick Links</h3>
+                                <ul class="elementor-icon-list-items">
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/careers/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">Careers</span>
+                                        </a>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/vital-reads/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">News & Events</span>
+                                        </a>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/contact-us/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">Contact Us</span>
+                                        </a>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <a href="https://sunbeth.net/our-policies/">
+                                            <span class="elementor-icon-list-icon"><i class="fas fa-chevron-right"></i></span>
+                                            <span class="elementor-icon-list-text">Legal & Privacy</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="footer-column">
+                                <h3>Contact</h3>
+                                <ul class="ct-contact-info">
+                                    <li>
+                                        <span class="ct-contact-icon"><i class="fas fa-phone"></i></span>
+                                        <span class="ct-contact-content">+2348056666002<br>+2348056666266</span>
+                                    </li>
+                                    <li>
+                                        <span class="ct-contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span class="ct-contact-content"><b>Corporate Office:</b> First Floor, Churchgate Towers 2, Victoria Island, Lagos State, Nigeria.</span>
+                                    </li>
+                                    <li>
+                                        <span class="ct-contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span class="ct-contact-content"><b>Head Office:</b> Kilometer 2, 4, Ondo-Owena Expressway, Akure, Ondo State, Nigeria.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>2025 © All rights reserved by <a href="https://niroyaLTD.com">Sunbeth Global Concepts</a></p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('menu').classList.toggle('show');
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabTitles = document.querySelectorAll('.ct-tab-title');
+            const tabContents = document.querySelectorAll('.ct-tab-content');
+            
+            tabTitles.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabTitles.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab contents
+                    tabContents.forEach(content => content.style.display = 'none');
+                    
+                    // Show the selected tab content
+                    const target = this.getAttribute('data-target');
+                    document.querySelector(target).style.display = 'block';
+                });
+            });
+            
+            // Mobile menu toggle (simplified version)
+            const menuToggle = document.createElement('button');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            menuToggle.style.position = 'absolute';
+            menuToggle.style.top = '20px';
+            menuToggle.style.right = '20px';
+            menuToggle.style.background = 'none';
+            menuToggle.style.border = 'none';
+            menuToggle.style.fontSize = '24px';
+            menuToggle.style.color = '#e08028';
+            menuToggle.style.cursor = 'pointer';
+            menuToggle.style.display = 'none';
+            
+            const headerNav = document.querySelector('.ct-header-navigation');
+            headerNav.appendChild(menuToggle);
+            
+            menuToggle.addEventListener('click', function() {
+                const menu = document.querySelector('.ct-main-menu');
+                menu.classList.toggle('show');
+            });
+            
+            // Check if mobile view
+            function checkMobile() {
+                if (window.innerWidth <= 768) {
+                    menuToggle.style.display = 'block';
+                    document.querySelector('.ct-main-menu').style.display = 'none';
+                } else {
+                    menuToggle.style.display = 'none';
+                    document.querySelector('.ct-main-menu').style.display = 'flex';
+                }
+            }
+            
+            checkMobile();
+            window.addEventListener('resize', checkMobile);
         });
     </script>
 </body>

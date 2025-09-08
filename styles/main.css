@@ -11,7 +11,7 @@
     --secondary: #D4AF37; /* Honey gold */
     --accent: #FFC107; /* Amber */
     --light: #F5F5F5; /* Ash white */
-    --dark: #2C3E50; /* Dark blue-gray */
+    --dark: #05fcb248; /* Dark blue-gray */
     --gray: #7F8C8D; /* Medium gray */
     --light-gray: #BDC3C7; /* Light gray */
     --white: #FFFFFF;
@@ -157,7 +157,7 @@ header {
 }
 
 .logo-img {
-    height: 50px;
+    height: 100px;
     width: auto;
     display: block;
     max-width: 100%;

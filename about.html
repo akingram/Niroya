@@ -1,757 +1,911 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | NIROYA</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us | SUNBETH GLOBAL CONCEPTS</title>
+    <meta name="description" content="SGC is the foremost indigenous exporter of top-quality cocoa beans and cashew in Nigeria. Established in 2017, we specialize in export of raw cocoa beans and cashew nuts.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- <style>
+    
+    <style>
         /* Global Styles */
+        :root {
+            --primary: #e08028;
+            --primary-dark: #dc5428;
+            --secondary: #2c3e50;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text: #555;
+            --white: #ffffff;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        :root {
-            --primary: #FFD700; /* Golden yellow */
-            --secondary: #D4AF37; /* Honey gold */
-            --accent: #FFC107; /* Amber */
-            --light: #F5F5F5; /* Ash white */
-            --dark: #2C3E50; /* Dark blue-gray */
-            --gray: #7F8C8D; /* Medium gray */
-            --light-gray: #BDC3C7; /* Light gray */
-            --white: #FFFFFF;
-            --ash-bg: #F8F9FA; /* Ash background */
-        }
-
+        
         body {
-            color: var(--dark);
+            font-family: 'Roboto', sans-serif;
+            color: var(--text);
             line-height: 1.6;
-            background-color: var(--ash-bg);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            overflow-x: hidden;
         }
-
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-
-        /* Header Styles */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-top {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 8px 0;
-            font-size: 14px;
-        }
-
-        .header-top-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-icons a {
-            color: var(--white);
-            text-decoration: none;
-            transition: color 0.3s;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .social-icons a:hover {
-            color: var(--primary);
-            background: rgba(255, 215, 0, 0.2);
-        }
-
-        .main-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            font-weight: bold;
-            gap: 10px;
-        }
-
-        .logo-img {
-            height: 50px;
-            width: auto;
-        }
-
-        .logo-text {
-            font-size: 24px;
-            color: var(--dark);
-            font-weight: 700;
-        }
-
-        .logo-text span {
-            color: var(--primary);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 16px;
-            transition: color 0.3s;
-            position: relative;
-            padding: 5px 0;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--primary);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
-
-        nav a:hover::after, nav a.active::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--dark);
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 40px 0;
-            flex-grow: 1;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(115deg, var(--dark) 0%, #2c3e50e0 100%), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3') no-repeat center center/cover;
-            color: var(--white);
-            padding: 120px 0;
-            text-align: center;
-            border-radius: 12px;
-            margin-bottom: 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.15) 0%, transparent 30%);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            color: var(--white);
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            color: var(--light);
-            font-weight: 300;
-        }
-
+        
         .btn {
             display: inline-block;
-            background-color: var(--primary);
-            color: var(--dark);
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: var(--white);
             border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-            letter-spacing: 0.5px;
         }
-
+        
         .btn:hover {
-            background-color: var(--secondary);
+            background: var(--primary-dark);
+            color: var(--white);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-
-        /* Services Section */
-        .services {
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .section {
             padding: 80px 0;
         }
-
+        
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
-
+        
         .section-title h2 {
-            font-size: 2.8rem;
-            color: var(--dark);
-            margin-bottom: 15px;
+            font-size: 36px;
             position: relative;
             display: inline-block;
-            font-weight: 700;
+            padding-bottom: 15px;
         }
-
-        .section-title h2::after {
+        
+        .section-title h2:after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 2px;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
         }
-
+        
         .section-title p {
+            font-size: 18px;
             color: var(--gray);
-            max-width: 700px;
-            margin: 25px auto 0;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            margin-top: 15px;
         }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-
-        .service-card {
-            background-color: var(--white);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            border-top: 5px solid var(--primary);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+        
+        header.sticky {
+            padding: 10px 0;
+            background: var(--white);
         }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--dark);
+        
+        .navbar {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-weight: 600;
+            justify-content: space-between;
+            padding: 15px 0;
         }
-
-        .service-content h3 i {
-            color: var(--primary);
-            font-size: 1.8rem;
+        
+        .logo img {
+            max-height: 50px;
         }
-
-        .service-content p {
-            margin-bottom: 25px;
-            color: var(--gray);
-            line-height: 1.7;
-            flex-grow: 1;
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
         }
-
-        /* About Preview */
-        .about-preview {
-            padding: 80px 0;
-            background-color: var(--light);
+        
+        .nav-menu li {
+            margin: 0 15px;
         }
-
+        
+        .nav-menu a {
+            color: var(--secondary);
+            font-weight: 500;
+            font-size: 16px;
+            position: relative;
+        }
+        
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://sunbeth.net/storage/2023/01/sunbeth-global-concepts-about-us-background-scaled.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* About Intro */
+        .about-intro {
+            background: var(--white);
+        }
+        
         .about-content {
             display: flex;
             align-items: center;
-            gap: 60px;
+            gap: 50px;
         }
-
+        
         .about-text {
             flex: 1;
         }
-
+        
         .about-text h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 25px;
-            position: relative;
-            font-weight: 700;
-        }
-
-        .about-text h2::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            width: 70px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 2px;
-        }
-
-        .about-text p {
+            font-size: 36px;
             margin-bottom: 20px;
-            color: var(--gray);
-            line-height: 1.8;
-            font-size: 1.1rem;
         }
-
+        
+        .about-text h2 span {
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
         .about-image {
             flex: 1;
-            height: 450px;
-            border-radius: 12px;
-            background: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3') no-repeat center center/cover;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-
-        .about-image:hover {
-            transform: scale(1.02);
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: all 0.5s ease;
         }
-
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Mission Section */
+        .mission {
+            background: var(--light);
+        }
+        
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .tab {
+            padding: 15px 30px;
+            background: var(--white);
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tab i {
+            margin-right: 10px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .tab.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .tab.active i {
+            color: var(--white);
+        }
+        
+        .tab-content {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+        }
+        
         /* Stats Section */
         .stats {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--dark) 0%, #34495e 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             color: var(--white);
+            text-align: center;
+        }
+        
+        .stats h2 {
+            color: var(--white);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .stat-box {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .stat-box i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .stat-box h3 {
+            font-size: 40px;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        
+        .stat-box p {
+            color: var(--light-gray);
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-
-        .stats::before {
+        
+        .value-box:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23FFD700" opacity="0.2"/></svg>') repeat;
-            animation: sparkle 15s linear infinite;
+            width: 5px;
+            height: 0;
+            background: var(--primary);
+            transition: all 0.5s ease;
         }
-
-        @keyframes sparkle {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100px); }
+        
+        .value-box:hover {
+            transform: translateY(-10px);
         }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
+        
+        .value-box:hover:before {
+            height: 100%;
         }
-
-        .stat-item {
-            padding: 30px 20px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        .stat-item h3 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
+        
+        .value-box i {
+            font-size: 40px;
             color: var(--primary);
-            font-weight: 700;
-        }
-
-        .stat-item p {
-            font-size: 1.1rem;
-            color: var(--light);
-            font-weight: 500;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 80px 0 20px;
-            margin-top: auto;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 50px;
-        }
-
-        .footer-column h3 {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 15px;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary);
-            border-radius: 2px;
-        }
-
-        .footer-column p {
-            color: #ccc;
-            line-height: 1.8;
             margin-bottom: 20px;
         }
-
-        .footer-column ul {
+        
+        .value-box h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            color: var(--white);
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+        
+        .cta .btn {
+            background: var(--white);
+            color: var(--primary);
+        }
+        
+        .cta .btn:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+        
+        .footer-col p {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
             list-style: none;
         }
-
-        .footer-column ul li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        
+        .footer-links li {
+            margin-bottom: 10px;
         }
-
-        .footer-column a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
+        
+        .footer-links a {
+            color: var(--light-gray);
+            transition: all 0.3s ease;
         }
-
-        .footer-column a:hover {
+        
+        .footer-links a:hover {
             color: var(--primary);
             padding-left: 5px;
         }
-
-        .footer-bottom {
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .copyright {
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 1rem;
-            color: #ccc;
         }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
+        
+        /* Responsive Styles */
+        @media (max-width: 991px) {
             .about-content {
                 flex-direction: column;
             }
             
             .about-image {
+                margin-top: 30px;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--white);
                 width: 100%;
+                height: calc(100vh - 80px);
+                padding: 50px 0;
+                transition: all 0.5s ease;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
-
-            .hero h1 {
-                font-size: 3.5rem;
+            
+            .nav-menu.active {
+                left: 0;
             }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
+            
+            .nav-menu li {
+                margin: 15px 0;
+                text-align: center;
+            }
+            
+            .hamburger {
                 display: block;
             }
-            
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
             }
             
-            nav ul.show {
-                display: flex;
+            .section-title h2 {
+                font-size: 30px;
             }
             
-            .header-top-content {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-            
-            .contact-info {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .services-grid {
+            .stats-grid,
+            .values-grid,
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 40px;
-            }
-            
-            .footer-column h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
         }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 80px 0;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 12px 25px;
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-
-            .stat-item h3 {
-                font-size: 2.5rem;
-            }
-        }
-    </style> -->
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-top">
-            <div class="container header-top-content">
-                <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
-                    <span><i class="fas fa-envelope"></i> info@niroya.com</span>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/images/Niroya.png" alt="NIROYA">
+                    </a>
                 </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="container main-header">
-            <a href="index.html" class="logo">
-                <!-- Logo as text with styling -->
-                 <img src="images/Niroya.png" alt="NIROYA Logo" class="logo-img">
-            </a>
-            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-            <nav>
-                <ul id="menu">
+                
+                <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="policy.html">Policy & Compliance</a></li>
+                    <!-- <li><a href="our-team/">Our Team</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>About Our Company</h1>
-                    <p>Learn about our history, mission, and the team behind our success</p>
-                </div>
-            </section>
-
-            <section class="about-preview">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Our Story</h2>
-                        <p>Founded in 1990, NIROYA began as a small trading firm with a vision to connect commodity producers with international markets. Over the past three decades, we have grown into a global leader in commodity trading and supply chain solutions.</p>
-                        <p>Our success is built on long-term relationships, market expertise, and a commitment to ethical business practices. We pride ourselves on delivering value to all stakeholders while maintaining the highest standards of integrity.</p>
-                    </div>
-                    <div class="about-image"></div>
-                </div>
-            </section>
-
-            <section class="services">
-                <div class="section-title">
-                    <h2>Our Values</h2>
-                    <p>The principles that guide our business decisions and operations</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-content">
-                            <h3><i class="fas fa-shield-alt"></i> Integrity</h3>
-                            <p>We conduct business with honesty, transparency, and ethical practices in all our operations and relationships.</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-content">
-                            <h3><i class="fas fa-lightbulb"></i> Innovation</h3>
-                            <p>We continuously seek new solutions and approaches to meet evolving market demands and client needs.</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-content">
-                            <h3><i class="fas fa-handshake"></i> Partnership</h3>
-                            <p>We build long-term relationships based on mutual trust, value creation, and shared success with our partners.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div class="hero-content">
+                <h1>About NIROYA</h1>
+                <p>Leading exporters of premium quality cocoa beans and cashew nuts from Nigeria to the world</p>
+                <a href="about.html" class="btn">Explore Our Story</a>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <!-- About Intro Section -->
+    <section id="about" class="section about-intro">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>NIROYA is the foremost indigenous exporter of top-quality <span>cocoa beans and cashew in Nigeria</span></h2>
+                    <p>NIROYA is a trading company specializing in the export of raw cocoa beans and cashew nuts. Established in 2017, the company has deep roots in the cocoa industry as it emanated from Sunny Owo ventures Nigeria Limited, a long-standing cocoa sourcing company with over 20 years of business activities in Ondo-State, Nigeria.</p>
+                    <p>At NIROYA, we originate approximately 35,000 metric tonnes of cocoa beans equivalent annually. Our cocoa beans are of high quality and for decades, we have sourced only the best products from our community of over two hundred and fifty (250) local farmers in Ondo state, Oyo state, Ekiti state, Ogun state, Osun state, Edo and Cross River State, Nigeria.</p>
+                    <p>The company has rapidly grown as a well-known exporter of top-quality cocoa beans and cashew in Nigeria through its impressive network of people, infrastructure, market awareness, logistics, and procurement capabilities.</p>
+                    <p>As a company, we are committed to building long-term relationships and strategic partnerships to create successful synergies for our stakeholders and contribute value across our supply chain.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://sunbeth.net/storage/2023/01/Sunbeth-Global-Concepts-warehousing.jpg" alt="NIROYA Warehouse">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission & Vision</h2>
+                <p>Driving excellence in agricultural export from Nigeria</p>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="purpose">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Our Purpose</span>
+                </div>
+                <div class="tab" data-tab="vision">
+                    <i class="fas fa-eye"></i>
+                    <span>Our Vision</span>
+                </div>
+                <div class="tab" data-tab="strategy">
+                    <i class="fas fa-chess-knight"></i>
+                    <span>Our Strategy</span>
+                </div>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="purpose">
+                    <p>We are a company with a relentless focus on quality of products and service.<br>We wish to deliver the highest possible perceived value to our partners in origin and at destination.<br>We aim to conduct business professionally, with passion, impact, and integrity.</p>
+                </div>
+                <div class="tab-pane" id="vision">
+                    <p>Our vision is to be a leading food and multi-commodity service & solution provider in the global food and agriculture markets, by creating measurable and impactful sustainable economic, social, and environmental value throughout the full value chain.</p>
+                </div>
+                <div class="tab-pane" id="strategy">
+                    <p>In order to keep up with changing demands, we are placing priority on our shareholders, suppliers, customers, employees and partners by investing in quality assurance, traceability and internationally recognized sustainability standards and certification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Achievements</h2>
+                <p>Years of excellence in agricultural export</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3 data-count="2017">0</h3>
+                    <p>Year Founded</p>
+                </div>
+                
+                <div class="stat-box">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3 data-count="150">0</h3>
+                    <p>Thousand Metric Tonnes Exported</p>
+                </div>
+                
+                <div class="stat-box">
+                    <i class="fas fa-handshake"></i>
+                    <h3 data-count="50">0</h3>
+                    <p>Global Partners</p>
+                </div>
+                
+                <div class="stat-box">
+                    <i class="fas fa-star"></i>
+                    <h3 data-count="100">0</h3>
+                    <p>Positive Reviews</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integrity</h3>
+                    <p>We maintain our integrity by being transparent in delivering our promise of value.</p>
+                </div>
+                
+                <div class="value-box">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>Service</h3>
+                    <p>We are service-minded and pay attention to providing impactful experiences to our stakeholders.</p>
+                </div>
+                
+                <div class="value-box">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Ambition</h3>
+                    <p>We want to do more, with a vibrant team. We care about our people and treat each other with respect.</p>
+                </div>
+                
+                <div class="value-box">
+                    <i class="fas fa-users"></i>
+                    <h3>Teamwork</h3>
+                    <p>We foster an environment of mutual respect and teamwork, valuing each member's contributions.</p>
+                </div>
+                
+                <div class="value-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>We challenge ourselves to see what is possible and strive to improve how we meet demands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2>Want to know more about us?</h2>
+            <p>Contact us today to learn more about our products and services, or to discuss potential partnership opportunities.</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NIROYA</h3>
-                    <p>Leading international commodity trading company providing innovative solutions and market expertise across global supply chains.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="/images/Niroya.png" alt="NIROYA Logo" style="max-height: 50px; margin-bottom: 20px;">
+                    <p>NIROYA is a reputable trading firm that specializes in the export of premium quality raw cocoa beans and cashew from Nigeria.</p>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/company/niroya"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://facebook.com/niroya"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/niroya"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/niroya"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/niroya"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="footer-column">
+                
+                <div class="footer-col">
                     <h3>Quick Links</h3>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <!-- <li><a href="https://sunbeth.net/our-team/">Our Team</a></li> -->
                         <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="policy.html">Policy & Compliance</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Trade Center, Global City, GC 10001</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@niroya.com</li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Other Pages</h3>
-                    <ul>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">News & Insights</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p>+2348056666002</p>
+                                <p>+2348056666266</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><b>Corporate Office:</b> artsoo.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><b>Head Office:</b> Kajoola.</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 NIROYA. All rights reserved.</p>
+            
+            <div class="copyright">
+                <p>&copy; 2025 NIROYA. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('menu').classList.toggle('show');
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
         });
+
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Tab Functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and panes
+                tabs.forEach(t => t.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to current tab and pane
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.stat-box h3');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = Math.ceil(target / speed);
+                
+                if (count < target) {
+                    counter.innerText = count + increment;
+                    setTimeout(() => animateCounters(), 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Initialize counters when stats section is in view
+        const statsSection = document.querySelector('.stats');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
     </script>
 </body>
 </html>
